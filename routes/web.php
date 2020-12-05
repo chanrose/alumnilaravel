@@ -28,5 +28,5 @@ Route::post('/add-alumni', [App\Http\Controllers\HomeController::class, 'addAlum
 /*Route::get('/viewlist', function () {
     return view('viewList');
 });*/
-Route::view('/addnew', 'addNew');
+Route::view('/single-view', 'viewAlumni');
 
