@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $NumAlumni = DB::table('alumni')->count();
+        return view('home', compact('NumAlumni'));
     }
     public function getList()
     {

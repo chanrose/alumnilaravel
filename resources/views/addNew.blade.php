@@ -19,31 +19,31 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputFName">First Name</label>
-                                        <input type="text" name="Fname" class="form-control" id="inputFName" placeholder="Kenny">
+                                        <input type="text" name="Fname" class="form-control" id="inputFName" placeholder="Kenny" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputLName">Last Name</label>
-                                        <input type="text" name="Lname" class="form-control" id="inputLName" placeholder="Ketty">
+                                        <input type="text" name="Lname" class="form-control" id="inputLName" placeholder="Ketty" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputId">ID Number</label>
-                                        <input type="text" name="IDNum" class="form-control" id="inputId" placeholder="202000xxx">
+                                        <input type="text" name="IDNum" class="form-control" id="inputId" placeholder="202000xxx" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputDoB">Date of Birth</label>
-                                        <input type="date" name="DoB" class="form-control" id="inputDoB">
+                                        <input type="date" name="DoB" class="form-control" id="inputDoB" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputNationality">Nationality</label>
-                                        <input type="text" name="Nationality" class="form-control" id="inputNationality" placeholder="Khmer">
+                                        <input type="text" name="Nationality" class="form-control" id="inputNationality" placeholder="Khmer" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputGender">Gender</label>
-                                        <select name="Gender" class="form-control" id="inputGender">
+                                        <select name="Gender" class="form-control" id="inputGender" required>
                                             <option>Select one</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -53,11 +53,11 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail">Email</label>
-                                        <input type="email" name="Email" class="form-control" id="inputEmail" placeholder="kennyketty@gmail.com">
+                                        <input type="email" name="Email" class="form-control" id="inputEmail" placeholder="kennyketty@gmail.com" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPhone">Phone Number</label>
-                                        <input type="tel" name="Pnumber" class="form-control" id="inputPhone" placeholder="+855 62 729 583 5">
+                                        <input type="tel" name="Pnumber" class="form-control" id="inputPhone" placeholder="+855 62 729 583 5" required>
                                     </div>
                                 </div>
 
@@ -66,7 +66,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="selectProgram">Program</label>
-                                        <select name="Program" class="form-control" id="selectProgram">
+                                        <select name="Program" class="form-control" id="selectProgram" required>
                                             <option>Select one</option>
                                             <option value="International Program">International Program</option>
                                             <option value="Thai Program">Thai Program</option>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="selectFaculty">Faculty</label>
-                                        <select name="Faculty" class="form-control" id="selectFaculty">
+                                        <select name="Faculty" class="form-control" id="selectFaculty" required>
                                             <option>Select one</option>
                                             <option value="Arts & Humanities">Arts & Humanities</option>
                                             <option value="Business Administration">Business Administration</option>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="selectMajor">Major</label>
-                                        <select name="Major" class="form-control" id="selectMajor">
+                                        <select name="Major" class="form-control" id="selectMajor" required>
                                             <option>Select one</option>
                                             <option value="English">English</option>
                                             <option value="Business Administration">Business Administration</option>
@@ -106,11 +106,11 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputCredit">Credits Earned</label>
-                                        <input type="number" name="CreditEarned" class="form-control" id="inputCredit" placeholder="Credits" name="inputCredit">
+                                        <input type="number" name="CreditEarned" class="form-control" id="inputCredit" placeholder="Credits" name="inputCredit" required>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputAdvisor">Advisor Name</label>
-                                        <input type="text" name="AdvisorName" class="form-control" id="inputAdvisor" placeholder="Advisor's fullname" name="inputAdvisor">
+                                        <input type="text" name="AdvisorName" class="form-control" id="inputAdvisor" placeholder="Advisor's fullname" name="inputAdvisor" required>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="selectMinor">Minor</label>
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress">Residential Address</label>
-                                    <textarea name="ResidentialAddress" class="form-control" id="inputAddress" rows="2"></textarea>
+                                    <textarea name="ResidentialAddress" class="form-control" id="inputAddress" rows="2" required></textarea>
                                 </div>
 
 

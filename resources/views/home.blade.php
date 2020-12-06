@@ -6,7 +6,11 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header text-white bg-dark">{{ __('Dashboard') }}</div>
+                <div class="img-fluid max-width: 20% m-4">
+                    <img src="https://raw.githubusercontent.com/chanrose/alumnilaravel/main/public/media/AIUCenter.png" class="rounded mx-auto d-block" alt="..." width="260" >
+                    
 
+                </div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -32,7 +36,9 @@
                                 </div>
                             </form>
                         </div>
-                    {{ __('You are logged in!') }} 
+                            <p>
+                                Currently, you have {{$NumAlumni}} Alumnus
+                            </p>
 
                 </div>
 
