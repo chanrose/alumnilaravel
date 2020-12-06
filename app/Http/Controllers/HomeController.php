@@ -27,6 +27,14 @@ class HomeController extends Controller
         $NumAlumni = DB::table('alumni')->count();
         return view('home', compact('NumAlumni'));
     }
+
+    public function search() {
+        $searchtext = $_GET['query'];
+
+        $alumnus = DB::table('alumni')->where('IDNum', 'LIKE', '%'.$searchtext.'%')->get();
+        return view('searchFound', compact('alumnus'));
+    }
+
     public function getList()
     {
         $alumni = DB::table('alumni')->get();

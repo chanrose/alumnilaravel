@@ -54,13 +54,13 @@
                         @else
                             <li>
                                 <a class="nav-link" href="/add-alumni" role="button">
-                                    New
+                                    Add Alumni
                                 </a>
                             </li>
 
                             <li>
                                 <a class="nav-link" href="/view-list" role="button">
-                                    View
+                                    View Alumnus
                                 </a>
                             </li>
                             <li class="nav-item dropdown">

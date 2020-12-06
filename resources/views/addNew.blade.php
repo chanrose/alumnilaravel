@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header text-white bg-dark">{{ __('Add New') }}</div>
+                    <div class="card-header text-white bg-dark">{{ __('Add Alumni') }}</div>
 
                     <div class="card-body">
                         @if (Session::has('Alumni_Added'))
@@ -135,8 +135,8 @@
                                 </div>
 
 
-                                <a class="btn btn-secondary" href="{{route('alumni.viewlist')}}">Go Back</a>
-                                <button type="submit" value="Submit" class="btn btn-primary">Add Form</button>
+                                <a class="btn btn-primary" href="{{route('alumni.viewlist')}}">Go Back</a>
+                                <button type="submit" value="Submit" class="btn btn-dark">Add Form</button>
                             </form>
                     </div>
                 </div>

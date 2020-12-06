@@ -31,6 +31,7 @@ Route::get('/view-alumni/{AID}', [App\Http\Controllers\HomeController::class, 'g
 
 Route::get('/delete-alumni/{AID}', [App\Http\Controllers\HomeController::class, 'deleteAlumniById'])->name('alumni.DeleteAlumniById');
 
+Route::get('/search', [App\Http\Controllers\HomeController::class, 'search']);
 
 
 /*Route::get('/viewlist', function () {
