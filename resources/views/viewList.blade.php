@@ -67,6 +67,7 @@
 
                                 </tbody>
                             </table>
+                                    <p>Scroll horizontally to other column with mobile</p>
                                 </div>
                             </div>
 
