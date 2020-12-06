@@ -33,6 +33,7 @@
                                 </form>
                             </div>
                             <div class="text-center">
+                                <div class="table-responsive">
                             <table class="table">
                                 <thead class="thead-secondary">
                                 <tr>
@@ -66,6 +67,7 @@
 
                                 </tbody>
                             </table>
+                                </div>
                             </div>
 
 

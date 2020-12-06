@@ -68,7 +68,7 @@
                                 <div class="form-group col-md-4">
                                     <label for="selectProgram">Program</label>
                                     <select value="{{$alumni->Program}}" name="Program" class="form-control" id="selectProgram">
-                                        <option>Selected {{$alumni->Program}}</option>
+                                        <option value="{{$alumni->Program}}">Selected {{$alumni->Program}}</option>
                                         <option value="International Program">International Program</option>
                                         <option value="Thai Program">Thai Program</option>
                                     </select>
@@ -76,7 +76,7 @@
                                 <div class="form-group col-md-4">
                                     <label for="selectFaculty">Faculty</label>
                                     <select value="{{$alumni->Faculty}}" name="Faculty" class="form-control" id="selectFaculty">
-                                        <option>Selected: {{$alumni->Faculty}} </option>
+                                        <option value="{{$alumni->Faculty}}">Selected: {{$alumni->Faculty}} </option>
                                         <option value="Arts & Humanities">Arts & Humanities</option>
                                         <option value="Business Administration">Business Administration</option>
                                         <option value="Education">Education</option>
@@ -87,9 +87,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label value="{{$alumni->Major}}" for="selectMajor">Major</label>
-                                    <select name="Major" class="form-control" id="selectMajor">
-                                        <option>Selected: {{$alumni->Major}}</option>
+                                    <label for="selectMajor">Major</label>
+                                    <select name="Major" value="{{$alumni->Major}}" class="form-control" id="selectMajor">
+                                        <option value="{{$alumni->Major}}">Selected: {{$alumni->Major}}</option>
                                         <option value="English">English</option>
                                         <option value="Business Administration">Business Administration</option>
                                         <option value="Teaching">Teaching</option>
@@ -116,7 +116,7 @@
                                 <div class="form-group col-md-4">
                                     <label for="selectMinor">Minor</label>
                                     <select  value="{{$alumni->Minor}}" name="Minor" class="form-control" id="selectMinor">
-                                        <option value="None">Selected: {{$alumni->Minor}}</option>
+                                        <option value="{{$alumni->Minor}}">Selected: {{$alumni->Minor}}</option>
                                         <option value="English">English</option>
                                         <option value="Business Administration">Business Administration</option>
                                         <option value="Teaching">Teaching</option>
