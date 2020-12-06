@@ -15,18 +15,20 @@ class CreateAlumniTable extends Migration
     {
         Schema::create('alumni', function (Blueprint $table) {
             $table->increments('AID');
-            $table->string('Fname', 200);
-            $table->string('Lname', 200);
+            $table->string('Fname', 30);
+            $table->string('Lname', 30);
             $table->integer('IDNum');
+            $table->string('Gender', 50);
+            $table->string('Nationality', 50);
             $table->date('DoB');
-            $table->string('Email', 200);
-            $table->string('Pnumber', 200);
-            $table->string('Program', 100);
-            $table->string('Faculty', 100);
-            $table->string('Major', 100);
+            $table->string('Email', 50);
+            $table->string('Pnumber', 20);
+            $table->string('Program', 20);
+            $table->string('Faculty', 20);
+            $table->string('Major', 20);
             $table->integer('CreditEarned');
-            $table->string('AdvisorName', 200);
-            $table->string('Minor', 100);
+            $table->string('AdvisorName', 60);
+            $table->string('Minor', 20);
             $table->text('ResidentialAddress');
         });
     }
