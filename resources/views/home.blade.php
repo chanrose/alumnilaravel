@@ -32,7 +32,7 @@
                                 </div>
                             </form>
                         </div>
-                    {{ __('You are logged in!') }} Testing
+                    {{ __('You are logged in!') }} 
 
                 </div>
 

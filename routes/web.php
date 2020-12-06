@@ -36,5 +36,3 @@ Route::get('/delete-alumni/{AID}', [App\Http\Controllers\HomeController::class, 
 /*Route::get('/viewlist', function () {
     return view('viewList');
 });*/
-Route::view('/single-view', 'viewAlumni');
-
