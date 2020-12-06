@@ -135,7 +135,7 @@
                                 </div>
 
 
-
+                                <a class="btn btn-secondary" href="{{route('alumni.viewlist')}}">Go Back</a>
                                 <button type="submit" value="Submit" class="btn btn-primary">Add Form</button>
                             </form>
                     </div>

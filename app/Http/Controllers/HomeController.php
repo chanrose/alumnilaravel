@@ -36,12 +36,44 @@ class HomeController extends Controller
     {
         return view('addNew');
     }
-    public function getAlumniById($id)
+    public function getAlumniById($AID)
     {
-        $alumni = DB::table('alumni')->where('AID', $id)->first();
-        return view('single-post', compact('alumni'));
+        $alumni = DB::table('alumni')->where('AID', $AID)->first();
+        return view('viewAlumni', compact('alumni'));
+    }
+    public function editAlumniById($AID)
+    {
+        $alumni = DB::table('alumni')->where('AID', $AID)->first();
+        return view('updateAlumni', compact('alumni'));
     }
 
+    public function updateAlumniById(Request $request)
+    {
+        DB::table('alumni')->where('AID', $request->AID)->update([
+            'Fname' => $request->Fname,
+            'Lname' => $request->Lname,
+            'DoB' => $request->DoB,
+            'IDNum' => $request->IDNum,
+            'Gender' => $request->Gender,
+            'Nationality' => $request->Nationality,
+            'Email' => $request->Email,
+            'Pnumber' => $request->Pnumber,
+            'Program' => $request->Program,
+            'Faculty' => $request->Faculty,
+            'Major' => $request->Major,
+            'CreditEarned' => $request->CreditEarned,
+            'AdvisorName' => $request->AdvisorName,
+            'Minor' => $request->Minor,
+            'ResidentialAddress' => $request->ResidentialAddress,
+        ]);
+        return back()->with('alumni_updated', 'Alumni has been updated Successfully');
+    }
+
+    public function deleteAlumniById($AID)
+    {
+        $alumni = DB::table('alumni')->where('AID', $AID)->delete();
+        return back()->with('alumni_deleted', 'Alumni has been deleted Successfully');
+    }
     public function addAlumniSubmit(Request $request)
     {
         DB::table('alumni')->insert([

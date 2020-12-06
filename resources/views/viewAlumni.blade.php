@@ -5,62 +5,58 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header text-white bg-dark">{{ __('Add New') }}</div>
+                    <div {{--class="card-header text-white bg-dark"--}}>
+                        <div class="img-fluid max-width: 20% m-4">
+                            <img src="https://raw.githubusercontent.com/chanrose/alumnilaravel/main/public/media/AIUCenter.png" class="rounded mx-auto d-block" alt="..." width="260" >
+                            <hr/>
+                            <p class="text-center">{{ __('View Alumni #') }} {{$alumni->AID}}</p>
+                        </div>
+                    </div>
 
                     <div class="card-body">
-                        <div>
-                            <img src="./public/media/AIUCenter.png" class="rounded mx-auto d-block" alt="...">
-                        </div>
-                        @if (Session::has('Alumni_Added'))
-                            <div class="alert alert-success" role="alert">
-                                {{ Session::get('Alumni_Added') }}
-                            </div>
-                        @endif
-                        <form method="POST" action="{{route('alumni.addSubmit')}}">
-                            @csrf
+
+
+                        <form>
                             <div class="card-subtitle text-muted mb-2">Personal Information</div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputFName">First Name</label>
-                                    <input type="text" name="Fname" class="form-control" id="inputFName" placeholder="Kenny">
+                                    <label class="text-muted mb-2">First Name</label>
+                                    <p class="lead">{{$alumni->Fname}}</p>{{--
+                                    <input type="text" name="Fname" class="form-control" id="inputFName" placeholder="Kenny">--}}
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputLName">Last Name</label>
-                                    <input type="text" name="Lname" class="form-control" id="inputLName" placeholder="Ketty">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputId">ID Number</label>
-                                    <input type="text" name="IDNum" class="form-control" id="inputId" placeholder="202000xxx">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputDoB">Date of Birth</label>
-                                    <input type="date" name="DoB" class="form-control" id="inputDoB">
+                                    <label class="text-muted mb-2">Last Name</label>
+                                    <p class="lead">{{$alumni->Lname}}</p>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputNationality">Nationality</label>
-                                    <input type="text" name="Nationality" class="form-control" id="inputNationality" placeholder="Khmer">
+                                    <label class="text-muted mb-2">ID Number</label>
+                                    <p class="lead">{{$alumni->IDNum}}</p>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputGender">Gender</label>
-                                    <select name="Gender" class="form-control" id="inputGender">
-                                        <option>Select one</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
+                                    <label class="text-muted mb-2">Date of Birth</label>
+                                    <p class="lead">{{$alumni->DoB}}</p>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputEmail">Email</label>
-                                    <input type="email" name="Email" class="form-control" id="inputEmail" placeholder="kennyketty@gmail.com">
+                                    <label class="text-muted mb-2">Nationality</label>
+                                    <p class="lead">{{$alumni->Nationality}}</p>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputPhone">Phone Number</label>
-                                    <input type="tel" name="Pnumber" class="form-control" id="inputPhone" placeholder="+855 62 729 583 5">
+                                    <label class="text-muted mb-2">Gender</label>
+                                    <p class="lead">{{$alumni->Gender}}</p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="text-muted mb-2">Email</label>
+                                    <p class="lead">{{$alumni->Email}}</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="text-muted mb-2">Phone Number</label>
+                                    <p class="lead">{{$alumni->Pnumber}}</p>
                                 </div>
                             </div>
 
@@ -68,78 +64,40 @@
                             <div class="card-subtitle text-muted mb-2">Academic Information</div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="selectProgram">Program</label>
-                                    <select name="Program" class="form-control" id="selectProgram">
-                                        <option>Select one</option>
-                                        <option value="International Program">International Program</option>
-                                        <option value="Thai Program">Thai Program</option>
-                                    </select>
+                                    <label class="text-muted mb-2">Program</label>
+                                    <p class="lead">{{$alumni->Program}}</p>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="selectFaculty">Faculty</label>
-                                    <select name="Faculty" class="form-control" id="selectFaculty">
-                                        <option>Select one</option>
-                                        <option value="Arts & Humanities">Arts & Humanities</option>
-                                        <option value="Business Administration">Business Administration</option>
-                                        <option value="Education">Education</option>
-                                        <option value="Religious Studies">Religious Studies</option>
-                                        <option value="Science">Science</option>
-                                        <option value="Information Technology">Information Technology</option>
-                                        <option value="Mission Faculty of Nursing">Mission Faculty of Nursing</option>
-                                    </select>
+                                    <label class="text-muted mb-2">Faculty</label>
+                                    <p class="lead">{{$alumni->Faculty}}</p>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="selectMajor">Major</label>
-                                    <select name="Major" class="form-control" id="selectMajor">
-                                        <option>Select one</option>
-                                        <option value="English">English</option>
-                                        <option value="Business Administration">Business Administration</option>
-                                        <option value="Teaching">Teaching</option>
-                                        <option value="Christian Studies">Christian Studies</option>
-                                        <option value="Bioscience">Bioscience</option>
-                                        <option value="Information Technology" >Information Technology</option>
-                                        <option value="English (Thai)">English (Thai)</option>
-                                        <option value="Accountancy (Thai)">Accountancy (Thai)</option>
-                                        <option value="Business Administration (Thai)">Business Administration (Thai)</option>
-                                        <option value=">Nursing Science (Thai)">Nursing Science (Thai)</option>
-
-                                    </select>
+                                    <label class="text-muted mb-2">Major</label>
+                                    <p class="lead">{{$alumni->Major}}</p>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="inputCredit">Credits Earned</label>
-                                    <input type="number" name="CreditEarned" class="form-control" id="inputCredit" placeholder="Credits" name="inputCredit">
+                                    <label class="text-muted mb-2">Credits Earned</label>
+                                    <p class="lead">{{$alumni->CreditEarned}} Credits</p>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="inputAdvisor">Advisor Name</label>
-                                    <input type="text" name="AdvisorName" class="form-control" id="inputAdvisor" placeholder="Advisor's fullname" name="inputAdvisor">
+                                    <label class="text-muted mb-2">Advisor Name</label>
+                                    <p class="lead">{{$alumni->AdvisorName}}</p>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="selectMinor">Minor</label>
-                                    <select name="Minor" class="form-control" id="selectMinor">
-                                        <option value="None">None</option>
-                                        <option value="English">English</option>
-                                        <option value="Business Administration">Business Administration</option>
-                                        <option value="Teaching">Teaching</option>
-                                        <option value="Christian Studies">Christian Studies</option>
-                                        <option value="Bioscience">Bioscience</option>
-                                        <option value="Information Technology" >Information Technology</option>
-                                        <option value="English (Thai)">English (Thai)</option>
-                                        <option value="Accountancy (Thai)">Accountancy (Thai)</option>
-                                        <option value="Business Administration (Thai)">Business Administration (Thai)</option>
-                                        <option value=">Nursing Science (Thai)">Nursing Science (Thai)</option>
-                                    </select>
+                                    <label class="text-muted mb-2">Minor</label>
+                                    <p class="lead">{{$alumni->Minor}}</p>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputAddress">Residential Address</label>
-                                <textarea name="ResidentialAddress" class="form-control" id="inputAddress" rows="2"></textarea>
+                                <label class="text-muted mb-2">Residential Address</label>
+                                <p class="lead">{{$alumni->ResidentialAddress}}</p>
                             </div>
 
 
 
-                            <button type="submit" value="Submit" class="btn btn-primary">Add Form</button>
+                            <a class="btn btn-primary" href="{{route('alumni.viewlist')}}">Go Back</a>
                         </form>
                     </div>
                 </div>
