@@ -23,12 +23,12 @@ class CreateAlumniTable extends Migration
             $table->date('DoB');
             $table->string('Email', 50);
             $table->string('Pnumber', 20);
-            $table->string('Program', 20);
-            $table->string('Faculty', 20);
-            $table->string('Major', 20);
+            $table->string('Program', 50);
+            $table->string('Faculty', 50);
+            $table->string('Major', 50);
             $table->integer('CreditEarned');
             $table->string('AdvisorName', 60);
-            $table->string('Minor', 20);
+            $table->string('Minor', 50);
             $table->text('ResidentialAddress');
         });
     }
